@@ -2,7 +2,7 @@
 
 Servo servo1;  
 
-void(* resetFunc) (void) = 0;
+//void(* resetFunc) (void) = 0;
 
 
 void setup() {
@@ -30,6 +30,6 @@ void loop()
 
         // no need for an else-statement, except maybe for debugging
       
-resetFunc();
+//resetFunc();
 
 }
