@@ -1,10 +1,13 @@
 import face_recognition
 import cv2
 import numpy as np
-import serial 
+import serial
+from serial import Serial
 
 ser = serial.Serial('/dev/ttyACM0')
 video_capture = cv2.VideoCapture(0)
+
+# print(cv2.getBuildInformation())
 
 dani0 = face_recognition.load_image_file("dani0.jpg")
 dani0_face_encoding = face_recognition.face_encodings(dani0)[0]
@@ -28,6 +31,7 @@ known_face_names = [
 
 def serWrite():
     ser.write(b'1')
+    print('yee')
 
 def imgUn():
     imgUnlocked = cv2.imread('/home/pi/Desktop/frLock/locked.png')
